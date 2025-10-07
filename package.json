@@ -3,12 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "homepage": "https://r4r35.github.io/CV-Website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/R4R35/CV-Website.git"
+},
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "deploy": "vite build && gh-pages -d dist",
-    "preview": "vite preview"
+    "preview": "vite preview",
+	"predeploy": "npm run build",
+	"deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
